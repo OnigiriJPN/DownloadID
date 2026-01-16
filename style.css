@@ -9,3 +9,8 @@
 body {
   font-family: 'ShirokumaFont', sans-serif;
 }
+
+button {
+  font-family: 'ShirokumaFont', sans-serif;
+  cursor: pointer;
+}
