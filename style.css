@@ -11,54 +11,69 @@ body {
   font-family: 'ShirokumaFont', 'Segoe UI', Roboto, sans-serif;
   background: #f5f6fa;
     color: #2f3640;
-    padding: 3rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-div {
+.container {
     max-width: 500px;
-    width: 100%;
-    padding: 2rem;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    width: 90%;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     text-align: center;
     animation: fadeIn 1s ease forwards;
 }
 
 /* ===== Headings ===== */
 h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: #2f3640;
+}
+
+/* ===== Paragraphs ===== */
+p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
 }
 
 /* ===== Buttons ===== */
 button {
     font-size: 1rem;
-    font-weight: 600;
-    padding: 0.7em 1.4em;
-    border-radius: 12px;
+    font-weight: 700;
+    padding: 0.75em 1.6em;
+    border-radius: 14px;
     border: none;
     cursor: pointer;
-    margin: 0.5rem 0;
+    margin: 0.6rem 0;
     display: inline-flex;
     align-items: center;
-    gap: 0.5em;
-    transition: all 0.25s ease-in-out;
+    gap: 0.6em;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
 }
 
 /* ダウンロードボタン */
 button:not(:disabled) {
     background: linear-gradient(135deg,#4cd137,#44bd32);
-    color: white;
+    color: #fff;
 }
 button:not(:disabled):hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+button:not(:disabled) i {
+    transition: transform 0.3s ease;
+}
+button:not(:disabled):hover i {
+    transform: rotate(-20deg) scale(1.2);
 }
 
 /* 無効ボタン */
@@ -68,17 +83,29 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* ===== Boxicons ===== */
-button i {
-    font-size: 1.2em;
-    transition: transform 0.3s ease, color 0.3s ease;
+/* ===== Ripple Effect ===== */
+button.ripple::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.5);
+    display: block;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    animation: ripple 0.6s linear;
 }
-button:not(:disabled):hover i {
-    transform: rotate(-15deg) scale(1.1);
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 /* ===== Fade-in ===== */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
+    0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0); }
 }
