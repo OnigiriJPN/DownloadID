@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="HelloShell.exe" version="1.0.0.0" publicKeyToken="618d7cdea259934a" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Launcher.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC マニフェスト オプション
+          Windows のユーザー アカウント制御のレベルを変更するには、
+          requestedExecutionLevel ノードを以下のいずれかで置換します。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         下位互換性を保つためにファイルおよびレジストリの仮想化を使用する場合、
+         requestedExecutionLevel ノードを削除します。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Launcher.exe" size="17776">
+      <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>UsA95qDmhAkF5VL74GMhwe82bWs1Ljj2WGmRpj91LLc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="HelloShell.deps.json" size="1931">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>utzaSy44njT+M8+FZftJPt/AL576BXOKdf3BR6Zng98=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="HelloShell.dll" size="15216">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2gl1/h6eak02ReRd60kDeUsX786Ff6Mpm3ahohQrt4o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="HelloShell.exe" size="157040">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>64HViIMhUUlTcsoqwdxXdFD2hZp5xnE7rAoL+KMltd8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="HelloShell.runtimeconfig.json" size="444">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eiEVfxPymSe+/kdlmQ1s/gpt0uI8TWF1iHEuzK0OYx4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Microsoft.Identity.Client.dll" size="1144344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AXPUyxMEcnZyN2VuXmUhuO8nhjwTGO4K0CjYIuEjcCA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Microsoft.IdentityModel.Abstractions.dll" size="19504">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JOl7VLa1wjShJKM2dX4xFmF6xsMLZVza50UX3C7LV0Y=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=ShellStudio" issuerKeyHash="60017ed3e7dda4fc95550749dc736be48f64beda" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3xkgS+IxLYYs0qtW2BxIh5uG31p9BS2BNJjpr7+4iG4=</DigestValue></Reference></SignedInfo><SignatureValue>T2tW039m2l2MAL1JzBf0i1JQmE1vcVOoemzapchC/YD8gQGOgO5iszAprzktYSZ0+QEJgHf/rFGidBDm0z5BJqqorODt/8bv+oMXPJuJTAQ9HggE/tis1prfcQV/fmSa1mrKoiEFPKFmawfUR08FD3KPKtC1t7G8cGO33Ve3CQEdoFMXfuzmec388qrq3RNTsQJXEy0jpXzw+r0q+7k5x5d588tOrooLDsaxkEl1E8+x3sJpZdZbvGKIA4PsAytROa8zQC6VXpFCzaPSeU+6G8novZiKJ/lAO7PvcgKglqOhgVF+dYQEV3euYyVi7b6SIXk/Ox4SvfanQ0NKKoGl5Q==</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>rscBSCV6wqAH0NQH5S6JYp1vx/MzKfJaH10/mxF2bDvrKAX79D+zoVXsbPQLVFjwU6Yk5nOFesJiOzh0kBxrrRG4wjGjSvuUYXKqX8zXqLCHoRpYpqGXg9rXRrxmPHoD/Jsyx201KDmBLhNccAzf2KXl+JPT3v5j1VIq3sY/Ibcp3JpQNekBeie6M+hasrQU7/OTBoKEtD5xwQLH2iNuL4LSEuxwZNhcvhLur8gtlkFhPxT+pNSTT51FjZIkOQLB/stOHrbCyaYcnhmGlBJvPkYENM/o+kYT6wRy4kRJGRBA93VxQZw9ea0wEQhyUmia+RyMTc/J5giVksTYjBHtTQ==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6e88b8bfafe99834812d057d5adf869b87481cd856abd22c862d31e24b2019df" Description="" Url=""><as:assemblyIdentity name="HelloShell.exe" version="1.0.0.0" publicKeyToken="618d7cdea259934a" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ShellStudio</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>G6FEJKT9cp9TsTwTUkzygH/3b9OkxcTZshArpPdK4gQ=</DigestValue></Reference></SignedInfo><SignatureValue>MF1oMkBV6iXchdm/5y2SOaiywvqkySX5t1m9fgWGDZKMRMUPE+2GPWG8qZSeF8EG01qdKmYp9SvVgZoIwq93PaABDnTJ+jd56MWi1cDCKNVsBxZUwgVQ1yIGTKdaAuixOYU22E0HWeDp1Y8OAN98Iym3WkRqGZ5fQfeMmnIvhIytDtjV6wv6igrPXY2k3x4W1w25z7LMyKcL8hswkl4DJmVDX0nd1dgDjxt7Tf7/gRW/hR5bN5tWkU9m0BF/O37SQ2bE/UU6TbFi4K5BtY8UKLACMii1nmR+ufoQc7+eEMFsVkVHaxr8xSqceem8wpoA2cZxO6nsxPyg5U4zSduMmw==</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>rscBSCV6wqAH0NQH5S6JYp1vx/MzKfJaH10/mxF2bDvrKAX79D+zoVXsbPQLVFjwU6Yk5nOFesJiOzh0kBxrrRG4wjGjSvuUYXKqX8zXqLCHoRpYpqGXg9rXRrxmPHoD/Jsyx201KDmBLhNccAzf2KXl+JPT3v5j1VIq3sY/Ibcp3JpQNekBeie6M+hasrQU7/OTBoKEtD5xwQLH2iNuL4LSEuxwZNhcvhLur8gtlkFhPxT+pNSTT51FjZIkOQLB/stOHrbCyaYcnhmGlBJvPkYENM/o+kYT6wRy4kRJGRBA93VxQZw9ea0wEQhyUmia+RyMTc/J5giVksTYjBHtTQ==</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIC/DCCAeSgAwIBAgIQXuAcpNb3Ob9Egzspmd7W3TANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtTaGVsbFN0dWRpbzAeFw0yNTEyMjAxMjI5NTdaFw0yNjEyMjAxMjQ5NTdaMBYxFDASBgNVBAMMC1NoZWxsU3R1ZGlvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArscBSCV6wqAH0NQH5S6JYp1vx/MzKfJaH10/mxF2bDvrKAX79D+zoVXsbPQLVFjwU6Yk5nOFesJiOzh0kBxrrRG4wjGjSvuUYXKqX8zXqLCHoRpYpqGXg9rXRrxmPHoD/Jsyx201KDmBLhNccAzf2KXl+JPT3v5j1VIq3sY/Ibcp3JpQNekBeie6M+hasrQU7/OTBoKEtD5xwQLH2iNuL4LSEuxwZNhcvhLur8gtlkFhPxT+pNSTT51FjZIkOQLB/stOHrbCyaYcnhmGlBJvPkYENM/o+kYT6wRy4kRJGRBA93VxQZw9ea0wEQhyUmia+RyMTc/J5giVksTYjBHtTQIDAQABo0YwRDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwHQYDVR0OBBYEFGABftPn3aT8lVUHSdxza+SPZL7aMA0GCSqGSIb3DQEBCwUAA4IBAQARFXHZI76NFCBzEKm0VOhnAUt1E41KSx1+Ef58TQYm84XU1HH3KYaSu4hw7JZufUGiSHkWZxSKMKtU7kuK2IIa+4S4MUcuY7JmiFurMzzaRvpzE0v+4v77T9qDp69797COo+swdQK51ntB0zL0PW0QGo6VF7kgfpvLXtrNiIeyH9qD4x2Ozmu/YxKpcMkfHGBD24r8OOw1Z68UZWNl9XCuLdqhXM1NRs1wdb3US+RK1sblvhq84jjHRBbDNA4YeQ6XiVxVtD09LVSMr4S/cwNAey2DLsGd8stM2QjAUErhrw6qmAUEUUODt4tUK4kLi3CLYee6W1qibY0Cowmsb9qU</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
