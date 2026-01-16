@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'ShirokumaFont';
+  src: url('001Shirokuma-Regular.woff') format('woff'); /* WOFFを指定 */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'ShirokumaFont', sans-serif;
+}
