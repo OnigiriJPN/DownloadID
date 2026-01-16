@@ -6,11 +6,88 @@
   font-display: swap;
 }
 
+/* ===== Global ===== */
 body {
-  font-family: 'ShirokumaFont', sans-serif;
+  font-family: 'ShirokumaFont', 'Segoe UI', Roboto, sans-serif;
+  background: #f5f6fa;      /* 明るくクリーン */
+  color: #2f3640;           /* モダンなダークグレー */
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
 }
 
+/* ===== Buttons ===== */
 button {
-  font-family: 'ShirokumaFont', sans-serif;
+  font-family: 'ShirokumaFont', 'Segoe UI', sans-serif;
   cursor: pointer;
+  background: #4cd137;       /* モダンなグリーン */
+  color: white;
+  border: none;
+  border-radius: 12px;       /* 丸みを帯びて柔らかく */
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;                /* アイコンとテキストの隙間 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.2s ease-in-out;
 }
+
+button:hover {
+  background: #44bd32;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Boxicons inside buttons ===== */
+button i {
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+
+button:hover i {
+  transform: rotate(-15deg) scale(1.1);
+}
+
+/* ===== Inputs & textareas ===== */
+input, textarea {
+  font-family: 'ShirokumaFont', 'Segoe UI', sans-serif;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  padding: 0.5em 0.8em;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #4cd137;
+  box-shadow: 0 0 0 3px rgba(76, 209, 55, 0.2);
+}
+
+/* ===== Links ===== */
+a {
+  color: #40739e;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #273c75;
+  text-decoration: underline;
+}
+💡 ポイント
+丸み＋影＋アニメーションでフラットなのに立体感
+
+色はモダンパレット（#4cd137 グリーン、#f5f6fa 背景、#2f3640 テキスト）
+
+Boxicons と組み合わせて、ボタン内にアイコン置くだけで一気にモダン感
+
+フォントは ShirokumaFont をベースに、Fallbackにシステムフォントで安全
+
