@@ -9,77 +9,76 @@
 /* ===== Global ===== */
 body {
   font-family: 'ShirokumaFont', 'Segoe UI', Roboto, sans-serif;
-  background: #f5f6fa;      /* 明るくクリーン */
-  color: #2f3640;           /* モダンなダークグレー */
-  margin: 0;
-  padding: 0;
-  transition: background 0.3s, color 0.3s;
+  background: #f5f6fa;
+    color: #2f3640;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ===== Headings ===== */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 /* ===== Buttons ===== */
 button {
-  font-family: 'ShirokumaFont', 'Segoe UI', sans-serif;
-  cursor: pointer;
-  background: #4cd137;       /* モダンなグリーン */
-  color: white;
-  border: none;
-  border-radius: 12px;       /* 丸みを帯びて柔らかく */
-  padding: 0.6em 1.4em;
-  font-size: 1rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;                /* アイコンとテキストの隙間 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7em 1.4em;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-button:hover {
-  background: #44bd32;
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+/* ダウンロードボタン */
+button:not(:disabled) {
+    background: linear-gradient(135deg,#4cd137,#44bd32);
+    color: white;
+}
+button:not(:disabled):hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-button:active {
-  transform: translateY(0) scale(0.98);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+/* 無効ボタン */
+button:disabled {
+    background: #dcdde1;
+    color: #7f8fa6;
+    cursor: not-allowed;
 }
 
-/* ===== Boxicons inside buttons ===== */
+/* ===== Boxicons ===== */
 button i {
-  font-size: 1.2em;
-  transition: transform 0.2s;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+button:not(:disabled):hover i {
+    transform: rotate(-15deg) scale(1.1);
 }
 
-button:hover i {
-  transform: rotate(-15deg) scale(1.1);
+/* ===== Fade-in ===== */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
-
-/* ===== Inputs & textareas ===== */
-input, textarea {
-  font-family: 'ShirokumaFont', 'Segoe UI', sans-serif;
-  border: 1px solid #dcdde1;
-  border-radius: 8px;
-  padding: 0.5em 0.8em;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.2s, box-shadow 0.2s;
-}
-
-input:focus, textarea:focus {
-  border-color: #4cd137;
-  box-shadow: 0 0 0 3px rgba(76, 209, 55, 0.2);
-}
-
-/* ===== Links ===== */
-a {
-  color: #40739e;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: #273c75;
-  text-decoration: underline;
-}
-
